@@ -1,3 +1,2 @@
-# Progetto di "Progettazione web"
-Progetto creato per l'esame di "Progettazione web" conseguito con il risultato di 30/30 in cui ho sviluppato un sito web
-per l'insegnamento delle lingue.
+# Progetto web ispirato a all'applicazione Duolingo 
+Sviluppo di un'applicazione web per l'insegnamento delle lingue, costituito da sezioni utente e amministratore accessibili tramite apposita pagina di login. La sezione amministratore ha la possibilità di interagire con il database attraverso opportuni controlli, mentre la sezione utente è corredata di varie funzionalità, tra cui cambio lingua ed esercizi in cui sono state sfruttate anche le API per il text to speech. I linguaggi che ho utilizzato per l'implementazione sono: HTML5, CSS e JavaScript con creazione del database attraverso MySQL e implementazione di varie funzionalità per la gestione del database attraverso query SQL e di PHP per l'interazione con il server.
