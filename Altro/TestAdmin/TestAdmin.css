@@ -1,0 +1,320 @@
+body{
+	margin: 0;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	background-color: #2d545e;
+	box-shadow: inset 2px 2px 20px 10px #12343b;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+#head{
+	padding: 50px;
+	padding-top: 30px;
+  	text-align: center;
+  	color: white;
+}
+
+h1{
+	margin: 0;
+	font-size: 30px;
+}
+
+h2{
+	font-size: 20px;
+
+	text-align: center;
+}
+
+#head p{
+	font-size: 15px;
+}
+
+a{
+	text-decoration: none;
+	font-size: 15px;
+	color: white;
+}
+
+#add h2{
+	padding-top: 20px;
+}
+
+/*.linkAdd{
+	border-right: 2px solid #333333;
+	padding: 7px;
+}*/
+
+#add{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	background-color: rgb(225, 179, 130);
+	box-shadow: 2px 2px 20px #12343b;
+	width: 100%;
+}
+
+label{
+	display: inline-block;
+	font-size: 13px;
+	padding: 5px 12px 0px 12px;
+	width: 100%;
+}
+
+textarea, select{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	border-radius: 10px;
+	border: 1px solid #8c8c8c;
+	box-shadow: 2px 2px 3px rgb(140, 140, 140, 0.5);
+	font-size: 12px;
+	outline: none;
+}
+
+select{
+	width: 100%;
+}
+
+textarea{
+	width: 100%;
+	height: 7em;
+}
+
+#submitAdd, #submitChange{
+	width: 70%;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	margin-top: 15px;
+	background-color: #4CAF50;
+	box-shadow: 0 5px #006622;
+	color: white;
+	font-weight: bold;
+	padding: 5px 0px;
+	border: none;
+	border-radius: 8px;
+}
+
+input[type="submit"]:active{
+	box-shadow: 0 2px #006622;
+	background-color: #3e8e41;
+}
+
+.col-25{
+	width: 72%;
+	margin: auto;
+}
+
+.col-75{
+	width: 68%;
+	margin: auto;
+}
+
+
+.row:after{
+	content: "";
+	display: table;
+	clear:both;
+}
+
+#change{
+	margin-top: 30px;
+}
+
+#change label{
+	color:white;
+}
+
+#change textarea, #change select{
+	box-shadow: 2px 2px 3px #12343b
+}
+
+#change h2{
+	text-align: center;
+	color: white;
+}
+
+#sidenav{
+	position: fixed;
+	top: 90px;
+}
+
+#sidenav a{
+	width: 100px;
+	position: absolute;
+	left: -80px;
+	transition: 0.3s;
+	padding: 15px;
+	padding-right: 100px;
+	font-size: 20px;
+	border-radius: 0 5px 5px 0;
+	font-size: 15px;
+	text-decoration: none;
+}
+
+#sidenav a:hover {
+  left: 0;
+}
+
+#sidenav a:hover{
+	visibility: initial;
+}
+
+#addSidenav{
+	top: 20px;
+	background-color: #ff3300;
+}
+
+#changeSidenav{
+	top: 80px;
+	background-color:#33ccff;
+}
+
+
+
+/*********************************************************
+**********************************************************/
+@media screen and (min-width: 400px){
+	#head p{
+		font-size: 18px;
+	}
+
+	h1{
+		font-size: 32px;
+	}
+
+	h2{
+		font-size: 23px;
+	}
+
+	a{
+		font-size: 18px;
+	}
+
+	label{
+		font-size: 17px;
+		padding: 10px 12px 0px 12px;
+	}
+
+	textarea, select{
+		font-size: 16px;
+	}
+
+	#submitAdd, #submitChange{
+		font-size: 17px
+	}
+
+	#formChange{
+		width: 70%;
+		margin: auto;
+	}
+}
+
+
+@media screen and (min-width: 600px) {
+
+	#head p{
+		font-size: 22px;
+	}
+
+	h1{
+		font-size: 36px;
+	}
+
+	h2{
+		font-size: 27px;
+	}
+
+	a{
+		font-size: 22px;
+	}
+
+	#formAdd, #formChange{
+		width: 60%;
+		margin: auto;
+	}
+
+	label{
+		font-size: 20px;
+		padding: 10px 12px 0px 12px;
+	}
+
+	.col-25{
+		float:left;
+		width: 45%;
+	}
+
+	.col-75{
+		float: left;
+		width: 55%;
+	}
+
+	#submitAdd{
+		width: 30%;
+		font-size: 18px;
+		margin-top: 20px;
+		float: left;
+		padding: 8px;
+	}
+
+	#submitChange{
+		width: 30%;
+		font-size: 18px;
+		margin-top: 20px;
+		padding: 8px;
+	}
+
+	textarea, select{
+		font-size: 17px;
+		margin-bottom: 10px;
+	}
+
+	select{
+		width:100%;
+		padding: 13px;
+	}
+
+	textarea{
+		width: 98%;
+		resize: none;	
+	}
+
+	hr{
+		width:80%
+	}
+}
+
+@media screen and (min-width: 1000px){
+	#head p{
+		font-size: 26px;
+	}
+
+	h1{
+		font-size: 40px;
+	}
+
+	h2{
+		font-size: 30px;
+	}
+	
+	a{
+		font-size: 26px;
+	}
+
+	#formAdd, #formChange{
+		width: 55%;
+	}
+
+	hr{
+		width:	65%
+	}
+}
+
+@media screen and (min-width: 1300px){
+	#formAdd, #formChange{
+		width: 40%;
+	}
+
+	hr{
+		width:	55%
+	}
+}

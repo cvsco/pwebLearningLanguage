@@ -1,0 +1,121 @@
+/*
+https://www.w3schools.com/css/css3_animations.asp
+
+https://www.w3schools.com/howto/howto_css_skill_bar.asp
+*/
+
+#content{
+	width: 800px;
+	margin: auto;
+}
+
+#topic_content{
+	float: left;
+	width: 60%;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+#classifica{
+	float: left;
+	width: 40%;
+}
+
+/*#section_1{
+	width: 90%;
+	margin: auto;
+}*/
+
+.single, .double{
+	width: 70%;
+	margin: 0 auto;
+	clear: left;
+	text-align: center;
+}
+
+.double .topic{
+	display: inline-block;
+	position: relative;
+	padding: 10px 35px;
+}
+
+.topic{
+	margin: auto;
+	width: 85px;
+}
+
+.background{
+	width: 85px;
+	height: 85px;
+	border-radius: 50%;
+	/*animation-duration: 1s;
+  	animation-fill-mode: forwards;
+  	animation-name: example2;*/
+  	cursor: pointer;
+  	box-shadow: 2px 2px 8px 2px rgb(166, 166, 166); 
+}
+
+.background_section_1{
+	background-color: rgb(179, 0, 0);
+}
+/*
+#background:hover{
+	animation-name: example;
+}*/
+
+.img{
+	width: 65px;
+	height: 65px;
+	margin: 0px auto;
+	position: relative;
+	top:12%;
+ 	background-size: cover;
+ 	z-index: 1;
+}
+
+.img_topic_1{
+	background-image: url('./../../img/topic/egg.png');
+}
+
+/*@keyframes example { /*on mouse hover*/
+	/*from {background-color: rgb(179, 0, 0);}
+  to {background-color: rgb(255, 0, 0);}
+}
+
+@keyframes example2 {/*on mouseout*/
+	/*from {background-color: rgb(255, 0, 0);}
+  to {	background-color: rgb(179, 0, 0);
+  		}
+}*/
+
+.loadbar{
+	margin-top: 4px;
+	width: 85px;
+	background-color: #ddd;
+	border-radius: 10px;
+	box-shadow: 1px 1px 8px 2px rgb(166, 166, 166);
+}
+
+.skill{
+	border-radius: inherit;
+	background-color: rgb(255, 204, 0);
+	text-align:right;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.skill_topic_1{
+	width: 25%;
+}
+
+.skill_topic_2{
+	width: 75%;
+}
+
+.skill_topic_3{
+	width: 0%;
+}
+
+.title{
+	text-align: center;
+	font-weight: bold;
+}

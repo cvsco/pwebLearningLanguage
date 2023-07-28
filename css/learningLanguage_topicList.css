@@ -1,0 +1,299 @@
+body{
+	margin: 0;
+	background-color: rgb(242, 242, 242, 0.2);
+}
+
+#content *{
+	box-sizing: initial;
+}
+
+#content{
+	width: 100%;
+	margin: auto;
+	margin-top: 70px;
+	margin-bottom: 70px;
+}
+
+#topic_content{
+	width: 90%;
+	margin: auto;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+#rank{
+	display: none;
+}
+
+li{
+	list-style-type: none;
+}
+
+.section{
+	width: 100%;
+	margin: 0 auto;
+	clear: left;
+	text-align: center;
+	padding-left: 0;
+}
+
+.section li:nth-child(2) .topic{
+	display: inline-block;
+	padding: 5px 20px;
+}
+
+.topic{
+	margin: auto;
+	width: 23%;
+}
+
+.background{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+  	cursor: pointer;
+  	box-shadow: 2px 2px 8px 1px rgb(166, 166, 166);
+  	margin: auto;
+}
+
+.background_section_1{
+	background-color: rgb(179, 0, 0);
+}
+
+.background_section_2{
+	background-color: rgb(0, 115, 230);
+}
+
+.background_section_3{
+	background-color: rgb(0, 153, 0);
+}
+
+.background_section_4{
+	background-color: rgb(230, 138, 0);
+}
+
+.img{
+	width: 35px;
+	height: 35px;
+	margin: 0px auto;
+	position: relative;
+	top: 13%;
+ 	background-size: cover;
+}
+
+.loadbar{
+	margin-top: 4px;
+	width: 50px;
+	background-color: #ddd;
+	border-radius: 10px;
+	box-shadow: 1px 1px 4px 1px rgb(166, 166, 166);
+	margin:auto;
+}
+
+.skill{
+	border-radius: inherit;
+	background-color: rgb(255, 204, 0);
+	text-align:right;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 0;
+}
+
+.title{
+	text-align: center;
+	font-weight: bold;
+	font-size: 11px;
+}
+
+.end_section{
+	width: 55px;
+	height: 55px;
+	background-image: url('./../img/lego.png');
+	background-size: cover;
+	margin: 8px auto;
+	text-align: center;
+}
+
+.end_section_one{
+	background-image: url('./../img/first.png');
+	background-size: cover;
+	width: 40px;
+	height: 40px;
+	margin: auto;
+	position: relative;
+	top: 40%;
+}
+
+hr{
+	width: 60%;
+	border: 2px solid rgb(255, 204, 0);
+}
+
+/**********************************************
+				OTHER MEDIA
+***********************************************/
+@media only screen and (min-width: 430px){
+	.background{
+		width: 62px;
+		height: 62px;
+  		box-shadow: 2px 2px 8px 2px rgb(166, 166, 166);
+	}
+
+	.img{
+		width: 42px;
+		height: 42px;
+		top: 14%;
+	}
+
+	.title{
+		font-size: 13px;
+	}
+
+	.end_section{
+		width: 65px;
+		height: 65px;
+	}
+
+	.section{
+		width: 80%;
+	}
+
+	.section li:nth-child(2) .topic{
+		padding: 5px 25px;
+	}
+
+	hr{
+		width: 50%;
+	}
+}
+
+
+@media only screen and (min-width: 640px){
+	
+	.background{
+		width: 74px;
+		height: 74px;
+	}
+
+	.title{
+		font-size: 16px;
+	}
+
+	.img{
+		width: 55px;
+		height: 55px;
+		top: 14%;
+	}
+
+	.loadbar{
+		width: 74px;
+		box-shadow: 1px 1px 8px 2px rgb(166, 166, 166);
+	}
+
+	.end_section{
+		width: 100px;
+		height: 100px;
+	}
+
+	.end_section div{
+		width: 40px;
+		height: 40px;
+		top: 40%;
+	}
+}
+
+@media only screen and (min-width: 710px){
+
+	.topic{
+		margin: auto;
+		width: 80px;
+	}
+
+	#topic_content{
+		padding-top: 10px;
+	}
+
+	.background{
+		width: 80px;
+		height: 80px;
+	}
+
+	.title{
+		font-size: 15px;
+	}
+
+	.img{
+		width: 50px;
+		height: 50px;
+		top: 16%;
+	}
+
+	.loadbar{
+		width: 80px;
+	}
+
+	.section li:nth-child(2) .topic{
+		padding: 8px 52px;
+	}
+
+	.section{
+		width: 78%;
+	}
+
+	hr{
+		width: 70%;
+	}
+}
+
+@media only screen and (min-width: 800px){
+	#content{
+		width: 800px;
+	}
+
+	#topic_content{
+		float: left;
+		width: 60%;
+		margin-top: 10px;
+	}
+
+	#rank{
+		display: block;
+		float: left;
+		width: 38%;
+	}
+
+	.topic{
+		margin: auto;
+		width: 90px;
+	}
+
+	.background{
+		width: 90px;
+		height: 90px;
+	}
+
+	.title{
+		font-size: 15px;
+	}
+
+	.img{
+		width: 60px;
+		height: 60px;
+		top: 16%;
+	}
+
+	.loadbar{
+		width: 90px;
+	}
+
+	.section li:nth-child(2) .topic{
+		padding: 8px 52px;
+	}
+
+	.section{
+		width: 82%;
+	}
+
+	hr{
+		width: 77%;
+	}
+}

@@ -1,0 +1,673 @@
+body{
+	margin: 0;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+a{
+	text-decoration: none;
+}
+
+#menu_content{
+	display: none;
+}
+
+#menu{
+	border-bottom: 2px solid rgb(191, 191, 191, 0.3);
+	height: 54px;
+	position: relative;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+#bottom_menu{
+	position: fixed;
+	bottom: 0;
+	height: 58px;
+	border-top: 2px solid rgb(191, 191, 191, 0.3);
+	width: 100%;
+}
+
+#user_stat_content, #bottom_menu_content{
+  	width: 90%;
+  	position: absolute;
+  	top: 50%;
+  	left:50%;
+  	transform: translate(-50%, -50%);
+}
+
+.bottom_menu_item{
+	float: left;
+	width: 50%;
+	text-align: center;
+}
+
+.bottom_menu_item span{
+	display: none;
+}
+
+.user_item{
+	display: inline-block;
+	width: 18%;
+	text-align: center;
+	background-position: center;
+	background-size: cover;
+	font-weight: bold;
+	font-size: 21px;
+}
+
+.user_item .value{
+	position: absolute;
+	margin-left: 3px;
+	font-size: 11px;
+	top: 17%;
+}
+
+#streak .value{
+	margin-left: 0px;
+}
+
+.user_item_image{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-position:center;
+	background-size:cover;
+}
+
+.menu_item_image{
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	background-position:center;
+	background-size:cover;
+}
+
+#flag{
+	float: left;
+}
+
+#light{
+	color: #ffc800;
+}
+
+#streak{
+	color: #ff9600;
+	margin-left: 3px;
+}
+
+#coin{
+	color: #0a84ff;
+	margin-left: 3px;
+}
+
+#photo{
+	float:left;
+}
+
+.flag_image{
+	background-image: url('./../img/ukFlag.png');
+}
+
+.light_image{
+	background-image: url('./../img/light.png');
+}
+
+.streak_image{
+	background-image: url('./../img/fire.png');
+}
+
+.coin_image{
+	background-image: url('./../img/coin.png'); 
+}
+
+.photo_image{
+	background-image: url('./../img/nullUserPhoto.png'); 
+}
+
+.shop_img_0{
+	background-image: url('./../img/shop_0.png');
+}
+
+.shop_img_1{
+	background-image: url('./../img/shop_1.png');
+}
+
+.learn_img_0{
+	background-image: url('./../img/learn_0.png');
+}
+
+.learn_img_1{
+	background-image: url('./../img/learn_1.png');
+}
+
+.highlighted_text{
+	color: #1cb0f6 !important;
+	font-weight: bold;
+}
+
+.streak_tooltip{
+	visibility: hidden;
+  	width: 200px;
+  	background-color: white;
+  	color: black;
+  	border: 2px solid rgb(166, 166, 166);
+  	padding: 5px 0;
+  	border-radius: 6px;
+  	position: absolute;
+  	z-index: 1;
+  	top: 110%;
+  	left: 50%; 
+  	margin-left: -60px;
+}
+
+#streak:hover .streak_tooltip{
+	visibility: visible;
+}
+
+#streak:hover{
+	opacity: 0.7;
+}
+
+.streak_tooltip::after {
+	content: ''; 
+    position: absolute;
+    left: 56%;
+    bottom: 99%;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-bottom-color: white;
+}
+
+.streak_tooltip::before {
+	content: ''; 
+    position: absolute;
+    left: 55.5%;
+    bottom: 101%;
+    width: 1;
+    height: 0;
+    border: 9px solid transparent;
+    border-bottom-color: rgb(166, 166, 166);
+}
+
+.streak_tooltip_img{
+	background-image: url('./../img/fire.png');
+	background-position:center;
+	background-size:cover;
+	float: left;
+	width: 80px;
+	height: 80px;
+}
+
+.streak_tooltip_txt{
+	font-size: 10px;
+	float: left;
+	width: 59%;
+}
+
+.streak_tooltip_txt h1{
+	float: left;
+	font-size: 15px;
+	margin: 0;
+}
+
+.streak_tooltip_txt p{
+	clear: left;
+	text-align: left;
+	font-size: 12px;
+	font-weight: normal
+}
+
+.coin_tooltip{
+	visibility: hidden;
+  	width: 190px;
+  	background-color: white;
+  	color: black;
+  	border: 2px solid rgb(166, 166, 166);
+  	padding: 5px 0;
+  	border-radius: 6px;
+  	position: absolute;
+  	z-index: 1;
+  	top: 110%;
+  	left: 58%; 
+  	margin-left: -60px;
+}
+
+#coin:hover .coin_tooltip{
+	visibility: visible;
+}
+
+#coin:hover{
+	opacity: 0.7;
+}
+
+.coin_tooltip::after {
+	content: '';
+    position: absolute;
+    left: 78%;
+    bottom: 99%;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-bottom-color: white;
+}
+
+.coin_tooltip::before {
+	content: ''; 
+    position: absolute;
+    left: 77.5%;
+    bottom: 101%;
+    height: 0;
+    border: 9px solid transparent;
+    border-bottom-color: rgb(166, 166, 166);
+}
+
+.coin_tooltip_img{
+	background-image: url('./../img/chest.png');
+	background-position: center;
+	background-size: cover;
+	float: left;
+	width: 70px;
+	height: 70px;
+	margin-left: 2px;
+}
+
+.coin_tooltip_txt{
+	float: left;
+	width: 59%;
+}
+
+.coin_tooltip_txt a{
+	font-size: 12px;
+	color: #0a84ff;
+	text-decoration: none;
+}
+
+.coin_tooltip_txt p{
+	text-align: left;
+	font-size: 13px;
+	font-weight: normal;
+	margin-left: 5px
+}
+
+.light_tooltip{
+	visibility: hidden;
+  	width: 230px;
+  	background-color: white;
+  	color: black;
+  	border: 2px solid rgb(166, 166, 166);
+  	padding: 5px 0;
+  	border-radius: 6px;
+  	position: absolute;
+  	z-index: 1;
+  	top: 110%;
+  	left: 40%; 
+  	margin-left: -60px;
+}
+
+#light:hover .light_tooltip{
+	visibility: visible;
+}
+
+#light:hover{
+	opacity: 0.7;
+}
+
+.light_tooltip::after {
+	content: '';
+    position: absolute;
+    left: 39%;
+    bottom: 100%;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-bottom-color: white;
+}
+
+.light_tooltip::before {
+	content: '';
+    position: absolute;
+    left: 38.5%;
+    bottom: 101%;
+    width: 1;
+    height: 0;
+    border: 9px solid transparent;
+    border-bottom-color: rgb(166, 166, 166);
+}
+
+.light_tooltip_img{
+	background-image: url('./../img/light.png');
+	background-position: center;
+	background-size: cover;
+	float: left;
+	width: 70px;
+	height: 70px;
+	margin-left: 2px;
+}
+
+.light_tooltip_txt{
+	float: left;
+	width: 66%;
+	margin-left: 3px;
+}
+
+.light_tooltip_txt h1{
+	float: left;
+	font-size: 15px;
+	margin: 0;
+}
+
+.light_tooltip_txt p{
+	clear: left;
+	text-align: left;
+	font-size: 12px;
+	font-weight: normal;
+	margin-left: 5px;
+}
+
+.photo_tooltip{
+	visibility: hidden;
+  	width: 200px;
+  	background-color: white;
+  	color: black;
+  	border: 2px solid rgb(166, 166, 166);
+  	padding: 5px 0;
+  	border-radius: 6px;
+  	position: absolute;
+  	z-index: 1;
+  	top: 110%;
+  	left: 50%; 
+  	margin-left: -60px;
+}
+
+#photo:hover .photo_tooltip{
+	visibility: visible;
+}
+
+#photo:hover{
+	opacity: 0.7;
+}
+
+.photo_tooltip::after {
+	content: ''; 
+    position: absolute;
+    left: 56%;
+    bottom: 99%;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-bottom-color: white;
+}
+
+.photo_tooltip::before {
+	content: ''; 
+    position: absolute;
+    left: 55.5%;
+    bottom: 101%;
+    height: 0;
+    border: 9px solid transparent;
+    border-bottom-color: rgb(166, 166, 166);
+}
+
+@media only screen and (min-width: 380px){
+
+	.user_item .value{
+		font-size: 14px;
+	}
+
+	.coin_tooltip{
+  		left: 66%; 
+  		width: 200px;
+	}
+
+	.coin_tooltip::after {
+    	left: 69%;
+	}
+
+	.coin_tooltip::before {
+    	left: 68.5%;
+	}
+
+	.streak_tooltip{
+  		left: 54%; 
+	}
+
+	.streak_tooltip::after {
+    	left: 55%;
+	}
+
+	.streak_tooltip::before {
+    	left: 53.5%;
+	}
+
+	.light_tooltip{
+  		left: 43%; 
+	}
+
+	.light_tooltip::after {
+    	left: 35%;
+	}
+
+	.light_tooltip::before {
+    	left: 34.5%;
+	}
+}
+
+@media only screen and (min-width: 620px){
+	.coin_tooltip::after {
+    	left: 78%;
+	}
+
+	.coin_tooltip::before {
+    	left: 77.5%;
+	}
+
+	.streak_tooltip::after {
+    	left: 57%;
+	}
+
+	.streak_tooltip::before {
+    	left: 55.5%;
+	}
+}
+
+/*******************************************************
+					TABLET SETTINGS
+********************************************************/
+
+@media only screen and (min-width: 760px){
+
+	#menu{
+		height: 71px;
+	}
+
+	#bottom_menu{
+		display: none;
+	}
+
+	#user_stat_content{
+  		width: 63%;
+  		float: left;
+  		position: static;
+  		transform: translateY(50%);
+	}
+
+	#menu_content{
+		float: left;
+		width:33%;
+		transform: translateY(50%);
+		margin-right: 30px;
+		display: initial;
+	}
+
+	.menu_item{
+		float: left;
+		width: 50%;
+		text-align: center;
+	}
+
+	#learn{
+		padding-right: 20px;
+	}
+
+	.menu_item_image, .user_item_image{
+		width: 30px;
+		height: 30px;
+	}
+
+	.menu_item .title{
+		font-size: 16px;
+		position: absolute;
+		top: 10%;
+		margin-left: 6px;
+		color: #afafaf;
+	}
+
+	.user_item .value{
+		top: 10%;
+		font-size: 17px;
+	}
+
+	.menu_item span:hover{
+		color: #8c8c8c;
+	}
+
+	.coin_tooltip{
+  		left: 70%; 
+  		width: 200px;
+	}
+
+	.streak_tooltip_txt p{
+		font-size: 13px;
+	}
+
+	.streak_tooltip{
+  		left: 56%; 
+	}
+
+	.streak_tooltip_txt p{
+		font-size: 13px;
+	}
+
+	.light_tooltip{
+  		left: 45%; 
+	}
+
+	.light_tooltip_txt p{
+		font-size: 13px;
+	}
+
+	.coin_tooltip::after {
+    	left: 70%;
+	}
+
+	.coin_tooltip::before {
+    	left: 69.5%;
+	}
+
+	.streak_tooltip::after {
+    	left: 55%;
+	}
+
+	.streak_tooltip::before {
+    	left: 54.5%;
+	}
+
+	.light_tooltip::after {
+    	left: 33%;
+	}
+
+	.light_tooltip::before {
+    	left: 32.5%;
+	}
+}
+
+/***********************************************************
+						DESKTOP SETTINGS
+***********************************************************/
+@media only screen and (min-width: 1100px){
+	#user_stat_content{
+  		width: 60%;
+	}
+
+	#menu_content{
+		width:36%;
+	}
+
+	#learn{
+		padding-right: 0px;
+	}
+
+	.menu_item_image, .user_item_image{
+		width: 32px;
+		height: 32px;
+	}
+
+	.menu_item .title{
+		font-size: 18px;
+		margin-left: 10px;
+	}
+
+	.user_item .value{
+		font-size: 19px;
+		margin-left: 8px;
+	}
+
+	.coin_tooltip{
+  		left: 78%; 
+	}
+
+	.streak_tooltip{
+  		left: 60%; 
+  		width: 220;
+	}
+
+	.streak_tooltip_txt p{
+		font-size: 14px;
+	}
+	
+	.streak_tooltip_txt p{
+		font-size: 14px;
+	}
+	
+	.light_tooltip_txt p{
+		font-size: 14px;
+	}
+
+	.coin_tooltip::after {
+    	left: 55%;
+	}
+
+	.coin_tooltip::before {
+    	left: 54.5%;
+	}
+
+	.streak_tooltip::after {
+    	left: 50%;
+	}
+
+	.streak_tooltip::before {
+    	left: 49.5%;
+	}
+
+	.light_tooltip::after {
+    	left: 34%;
+	}
+
+	.light_tooltip::before {
+    	left: 33.5%;
+	}
+}
+
+@media only screen and (min-width: 1500px){
+	#user_stat_content{
+  		width: 56%;
+	}
+
+	#menu_content{
+		width:32%;
+		margin-left: 80px;
+	}
+}

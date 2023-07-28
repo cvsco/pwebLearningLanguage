@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prova</title>
+
+	<style type="text/css">
+		#audio_button{
+			width:40px; 
+			height: 40px;
+			padding: 10px 10px;
+			cursor: pointer;
+			//box-shadow: 3px 3px 7px 3px rgb(166, 166, 166, 0.5);
+			//border-radius: 4px 4px;
+			background-image: url('./img/speaker.png'); 
+			background-color: #ffffff;  
+			background-size: cover; 
+			border-style: none;
+		}
+
+		#audio_button:active{
+			//box-shadow: 1px 1px 5px 3px rgb(140, 140, 140, 0.5);
+  			transform: translateY(2px);
+		} 
+
+		#container1:hover{
+			transform: rotateY(90deg);
+		}
+
+	</style>
+
+	
+	<script type="text/javascript">
+		
+		function rot(){
+			var div = document.getElementById("container");
+			var x=0, y=0, z=0, a=0;
+			
+			/*var timer = setInterval(function(){
+										y = y+10;
+										div.style.transform = "rotateY(" + y + "deg)"; }, 100)*/
+
+			/*var timer = setInterval(function(){
+				x += 0.1;
+				y += 0.1;
+				z += 0.1;
+				a += 10;
+				div.style.transform = "rotate3d(" + x + ',' + y + ',' + z + ',' + a + "deg)";
+			}, 100);*/
+		}
+
+		function audio(){
+			var snd = new Audio("./audio/he studies ten hours a day - scuola.mp3");
+			snd.play();
+		}
+
+		/*function rotate(){
+			var content = document.getElementById('container1');
+			//var img = document.getElementById('image'); 
+			var y = 0;
+			var x=0;
+			var z=0;
+			var a=0;
+
+			var rotation = setInterval(function(){
+				if(y==90){
+					clearInterval(rotation);
+					z=0;
+					y=0;
+					a=0;
+				}
+
+				content.style.transform = "rotate3d(" + x + ','+ y +','+ z+','+a+''+ "deg)";
+				//img.style.transform = "rotateY(" + y + "deg)";
+				y+=10;
+				//z+=10;
+				//x+=10;
+				a+=10;
+			}, 300);
+		}*/
+	</script>
+</head>
+<body onload='rot()'>
+	<div id="container" style="width:26px; height: 30px; transform: rotateY(0deg);">
+		<svg width="26" height="30" viewBox="0 0 26 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+			<title>lingot</title>
+			<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+				<g>
+					<path d="M4.12 6.36l6.475-3.908a4.387 4.387 0 0 1 4.534 0l6.475 3.907a4.387 4.387 0 0 1 2.12 3.757v9.666a4.387 4.387 0 0 1-2.12 3.756l-6.475 3.907a4.387 4.387 0 0 1-4.534 0L4.12 23.538A4.387 4.387 0 0 1 2 19.782v-9.666c0-1.538.804-2.962 2.12-3.757z" stroke="#FFF" stroke-width="2" fill="#FC4848"/><path d="M12.89 6.273v3.165c0 .378-.198.728-.52.924l-2.948 1.783a1.08 1.08 0 0 1-1.179-.04l-2.386-1.672a1.08 1.08 0 0 1 .055-1.805l5.333-3.276a1.08 1.08 0 0 1 1.645.92z" fill="#FFF" opacity=".793"/>
+				</g>
+			</g>
+		</svg>
+	</div>
+
+	<input id="audio_button" type="button"  onclick="audio()">
+</body>
+</html>

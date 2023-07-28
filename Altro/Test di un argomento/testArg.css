@@ -1,0 +1,272 @@
+body{
+	margin: 0;
+}
+
+#content{
+	width: 100%;
+	margin: auto;
+	margin-top: 20px;
+}
+
+#topic_content{
+	width: 90%;
+	margin: auto;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+#rank{
+	display: none;
+}
+
+li{
+	list-style-type: none;
+}
+
+.section{
+	width: 100%;
+	margin: 0 auto;
+	clear: left;
+	text-align: center;
+	padding: 0;
+}
+
+
+.section li:nth-child(2) .topic{
+	display: inline-block;
+	padding: 5px 20px;
+}
+
+.topic{
+	margin: auto;
+	width: 23%;
+}
+
+.background{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	/*animation-duration: 1s;
+  	animation-fill-mode: forwards;
+  	animation-name: example2;*/
+  	cursor: pointer;
+  	box-shadow: 2px 2px 8px 1px rgb(166, 166, 166);
+  	margin: auto;
+}
+
+.background_section_1{
+	background-color: rgb(179, 0, 0);
+}
+
+.background_section_2{
+	background-color: rgb(51, 153, 255);
+}
+
+.img{
+	width: 35px;
+	height: 35px;
+	margin: 0px auto;
+	position: relative;
+	top: 13%;
+ 	background-size: cover;
+ 	z-index: 1;
+}
+
+#img_topic_1{
+	background-image: url('./../../img/topic/egg.png');
+}
+
+/*@keyframes example { /*on mouse hover*/
+	/*from {background-color: rgb(179, 0, 0);}
+  to {background-color: rgb(255, 0, 0);}
+}
+
+@keyframes example2 {/*on mouseout*/
+	/*from {background-color: rgb(255, 0, 0);}
+  to {	background-color: rgb(179, 0, 0);
+  		}
+}*/
+
+.loadbar{
+	margin-top: 4px;
+	width: 50px;
+	background-color: #ddd;
+	border-radius: 10px;
+	box-shadow: 1px 1px 4px 1px rgb(166, 166, 166);
+	margin:auto;
+}
+
+.skill{
+	border-radius: inherit;
+	background-color: rgb(255, 204, 0);
+	text-align:right;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+/*#skill_topic_1{
+	width: 25%;
+}
+
+#skill_topic_2{
+	width: 75%;
+}
+
+.skill_topic_3{
+	width: 0%;
+}*/
+
+.title{
+	text-align: center;
+	font-weight: bold;
+	font-size: 11px;
+}
+
+.end_section{
+	width: 55px;
+	height: 55px;
+	background-image: url('./../../img/lego.png');
+	background-size: cover;
+	margin: 8px auto;
+	text-align: center;
+}
+
+.end_section_one{
+	background-image: url('./../../img/first.png');
+	background-size: cover;
+	width: 40px;
+	height: 40px;
+	margin: auto;
+	position: relative;
+	top: 40%;
+}
+
+hr{
+	width: 60%;
+	border: 2px solid rgb(255, 204, 0)/*rgb(0, 179, 60)*/;
+}
+
+/**********************************************
+
+***********************************************/
+@media only screen and (min-width: 430px){
+	.background{
+		width: 62px;
+		height: 62px;
+  		box-shadow: 2px 2px 8px 2px rgb(166, 166, 166);
+	}
+
+	.img{
+		width: 42px;
+		height: 42px;
+		top: 14%;
+	}
+
+	.title{
+		font-size: 13px;
+	}
+
+	.end_section{
+		width: 65px;
+		height: 65px;
+	}
+
+	.section{
+		width: 80%;
+	}
+
+	.section li:nth-child(2) .topic{
+		padding: 5px 25px;
+	}
+
+	hr{
+		width: 50%;
+	}
+}
+
+
+@media only screen and (min-width: 640px){
+	
+	.background{
+		width: 74px;
+		height: 74px;
+	}
+
+	.title{
+		font-size: 16px;
+	}
+
+	.img{
+		width: 55px;
+		height: 55px;
+		top: 14%;
+	}
+
+	.loadbar{
+		width: 74px;
+		box-shadow: 1px 1px 8px 2px rgb(166, 166, 166);
+	}
+
+	.end_section{
+		width: 100px;
+		height: 100px;
+	}
+
+	.end_section div{
+		width: 40px;
+		height: 40px;
+		top: 40%;
+	}
+}
+
+@media only screen and (min-width: 710px){
+
+	#content{
+		width: 800px;
+	}
+
+	#rank{
+		display: block;
+		float: left;
+		width: 40%;
+	}
+
+	#topic_content{
+		float: left;
+		width: 60%;
+	}
+
+	.topic{
+		margin: auto;
+		width: 85px;
+	}
+
+	.background{
+		width: 85px;
+		height: 85px;
+	}
+
+	.title{
+		font-size: 15px;
+	}
+
+	.img{
+		width: 65px;
+		height: 65px;
+		top: 14%;
+	}
+
+	.loadbar{
+		width: 85px;
+	}
+
+	.section li:nth-child(2) .topic{
+		padding: 8px 52px;
+	}
+
+	hr{
+		width: 80%;
+	}
+}
+
+
+

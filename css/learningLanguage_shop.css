@@ -1,0 +1,195 @@
+body{
+	background-color: rgb(242, 242, 242, 0.2);
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+#content *{
+	box-sizing: initial;
+}
+
+#content{
+	width: 100%;
+	margin: auto;
+	margin-top: 70px;
+	margin-bottom: 80px;
+}
+
+#rank{
+	display: none;
+}
+
+#shop_content{
+	width: 90%;
+	margin: auto;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+#rank{
+	display: none;
+}
+
+#item_list{
+	padding: 0;
+}
+
+#item_list li{
+	list-style-type: none;
+}
+
+#streak_freeze{
+	border-top: 2px solid #e5e5e5;
+	margin-bottom: 10px;
+	padding: 15px 10px;
+}
+
+#coins_bet{
+	border-top: 2px solid #e5e5e5;
+	padding: 20px 10px 15px;
+	padding-top: 20px;
+}
+
+.powerupImg{
+	background-size: cover;
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+}
+
+#streak_freeze_img{
+	background-image: url('./../img/ice.png');
+}
+
+#coins_bet_img{
+	background-image: url('./../img/calendar.png');
+}
+
+.details{
+	width: 60%;
+	display: inline-block;
+	margin-left: 5px;
+	vertical-align: top;
+}
+
+#title_head{
+	font-size: 20px; 
+}
+
+#item_list h2{
+	font-size: 18px;
+	margin-bottom: 2px;
+	margin-top: 0;
+}
+
+#item_list p{
+	margin: 0;
+	font-size: 14px; 
+}
+
+.button{
+	margin-top: 10px;
+}
+
+.buyButton{
+	border: 3px solid #e5e5e5;
+	box-shadow: 0px 4px #e5e5e5;
+	background: none;
+	padding: 10px 13px;
+	color: #1a8cff;
+	border-radius: 10px;
+	font-weight: bold;
+	font-size: 14px;
+	font-family: inherit;
+	cursor: pointer;
+	outline: none;
+	margin-top: 100px;
+}
+
+.buyButton:active{
+	box-shadow: 0px 2px #e5e5e5;
+	background-color: #d9d9d9;
+	transform: translateY(2px);
+}
+
+.buyButton:disabled{
+	background-color: #e5e5e5;
+	box-shadow: 0px 0px;
+	color: #999999;
+}
+
+.priceImg{
+	background-image: url('./../img/coin.png');
+	display: inline-block;
+	background-size: contain;
+	width: 23px;
+	height: 23px;
+	line-height: 20px;
+	vertical-align: bottom;
+	margin-left: 2px;
+}
+
+#coin_rules{
+	clear: left;
+}
+	
+#coin_rules_list{
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+#coin_rules_list h4{
+	margin: 0;
+}
+
+#coin_rules_list p{
+	font-weight: normal;
+	font-size: 14px;
+	margin: 5px 0px 10px;
+}
+
+#coin_rules h3{
+	margin-top: 25px;
+	margin-bottom: 14px;
+	margin-left: 10px;
+}
+
+@media only screen and (min-width: 400px){
+	#coin_rules_list p{
+		font-size: 15px;
+		width: 75%;
+	}
+
+	#item_list p{
+		font-size: 15px;
+	}
+
+	.details{
+		margin-left: 15px;
+		width: 66%;
+	}
+
+	.buyButton{
+		margin-top: 15px;
+	}
+} 
+
+@media only screen and (min-width: 800px){
+	#content{
+		width: 800px;
+	}
+
+	#shop_content{
+		float: left;
+		width: 56%;
+	}
+
+	#rank{
+		display: block;
+		float: left;
+		width: 44%;
+	}
+
+	#coin_rules_list p{
+		width: 80%;
+	}
+
+}

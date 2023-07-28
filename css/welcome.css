@@ -1,0 +1,190 @@
+body{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+h1{
+	font-size: 20px;
+}
+
+input[type="radio"]{
+	opacity: 0;
+}
+
+input[type="submit"]{
+	background-color: rgb(0, 153, 51); 
+	border: none;
+	border-radius: 10px;
+	width: 50%;
+	color: white;
+	font-weight: bold;
+	box-shadow: 2px 2px 3px 1px rgb(102, 102, 102);
+	margin: 10px auto;
+	font-size: 20px;
+	padding: 5px;
+	cursor: pointer; 
+}
+
+input[type="submit"]:active{
+	transform: translateY(2px);
+	box-shadow: 0 1px 1px 1px rgb(102, 102, 102);
+}
+
+section{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 90%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+label{
+	margin: 0px auto;
+	border: 2px solid rgb(153, 153, 153, 0.4);
+	display: block;
+	border-radius: 15px 40px;
+	width: 87%;
+	cursor: pointer;
+	margin-bottom: 20px;
+	padding: 5px;
+	box-shadow: 2px 2px 10px 2px rgb(179, 179, 179);
+	font-size: 14px;
+}
+
+label:hover{
+	box-shadow: 1px 1px 10px 1px rgb(179, 179, 179);
+}
+
+label:active{
+	transform: translateY(2px);
+}
+
+.selected{
+	border-color: rgb(28, 176, 246);
+	background-color: rgb(28, 176, 246, 0.2);
+	color: rgb(28, 176, 246);
+}
+
+.level{
+	float: left;
+	padding-left: 15px;
+	font-weight: bold;
+}
+
+.minutes{
+	float: right;
+	padding-right: 10px;
+	font-weight: normal;
+}
+
+@media only screen and (min-width: 550px) {
+	#container{
+		padding-top: 100px;
+	}
+
+	section{
+		top: 40%;
+	}
+
+	h1{
+		font-size: 30px;
+	}
+
+	input[type="submit"]{
+		width: 40%;
+		font-size: 28px;
+	}
+
+	label{
+		margin-bottom: 15px;
+		font-size: 24px;
+		margin-bottom: 30px;
+	}
+
+	.level{
+		padding-left: 29px;
+	}
+
+	.minutes{
+		padding-right: 24px;
+	}
+
+}
+
+/**********************************************************
+					TABLET SETTINGS
+**********************************************************/
+@media only screen and (min-width: 760px) {
+
+	#container{
+		padding-top: 120px;
+	}
+
+	section{
+		width: 80%;
+	}
+
+	input[type="submit"]{
+		font-size: 30px;
+	}
+
+	label{
+		font-size: 25px;
+		width: 70%;
+	}
+
+	.level{
+		padding-left: 26px;
+	}
+
+	.minutes{
+		padding-right: 21px;
+	}
+
+}
+
+/**************************************************************
+					DESKTOP SETTINGS
+***************************************************************/
+@media only screen and (min-width: 1100px) {
+	h1{
+		font-size: 40px;
+	}
+
+	section{
+		width: 75%;
+	}
+
+	label{
+		font-size: 28px;
+		width: 65%;
+	}
+
+	input[type="submit"]{
+		font-size: 34px;
+	}
+}
+
+@media only screen and (min-width: 1400px) {
+
+	h1{
+		font-size: 30px;
+	}
+
+	section{
+		width: 62%;
+	}
+
+	label{
+		width: 60%;
+	}
+
+	input[type="submit"]{
+		font-size: 34px;
+	}
+
+}

@@ -1,0 +1,332 @@
+body, html{
+	margin: 0;
+	height: 100%;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+#bg-image{
+	filter: blur(2px);
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+}
+
+#login_content{
+	border: none;
+	color: black;
+	text-align: center;
+	z-index: 2;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 85%;
+	background-color: rgb(255, 255, 255, 0.6);
+	font-family: Georgia, Times, "Times New Roman", serif;
+	border-radius: 20px;
+	box-shadow: -3px 3px 30px 5px rgb(153, 153, 153, 0.5)
+}
+
+#login_content h1{
+	font-size: 38px;
+	margin: 0;
+	margin-top: 10px;
+	text-shadow: 2px 1px 10px rgb(102, 102, 102);
+}
+
+#login_content h2{
+	font-size: 20px;
+}
+
+#login_content p{
+	display: none;
+}
+
+#login_form label{
+	font-size: 18px;
+	text-shadow: 1px 1px 3px rgb(102, 102, 102);
+	font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+#login_form input{
+	margin-bottom: 20px;
+	width: 220px;
+	height: 32px;
+	border-radius: 2px;
+	box-shadow: 2px 2px 3px rgb(102, 102, 102);
+	border: 2px solid rgb(179, 230, 255, 0.32);
+}
+
+#login_form input[type="submit"]{
+	border-radius: 10px;
+	width: 30%;
+	background-color: rgb(0, 153, 51);
+	color: white;
+	font-weight: bold;
+	box-shadow: 0 1px 3px 1px rgb(102, 102, 102);
+	border: none;
+	margin: 10px auto;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+#login_form input[type="submit"]:active, #signin_form input[type="submit"]:active{
+	transform: translateY(2px);
+	box-shadow: 0 1px 1px 1px rgb(102, 102, 102);
+}
+
+#signin_form{
+	display: none;
+	opacity: 0;
+}
+
+#signin_form label{
+	font-size: 15px;
+	text-shadow: 1px 1px 3px rgb(102, 102, 102);
+	font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+#signin_form input{
+	margin-bottom: 11px;
+	width: 180px;
+	height: 23px;
+	border-radius: 2px;
+	box-shadow: 2px 2px 3px rgb(102, 102, 102);
+	border: 2px solid rgb(179, 230, 255, 0.32);
+}
+
+#signin_form input[type="submit"]{
+	border-radius: 10px;
+	width: 30%;
+	background-color: rgb(230, 0, 0);
+	color: rgb(217, 217, 217);
+	font-weight: bold;
+	box-shadow: 0 1px 3px 1px rgb(102, 102, 102);
+	border: none;
+	margin: 5px auto;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.signin_button, .login_button{
+	font-size: 16px;
+	color: #595959;
+	margin: 10px auto 17px;
+}
+
+.login_button{
+	margin: 3px auto 15px;
+}
+
+.signin_button button, .login_button button{
+	background-color: inherit;
+	font-size: 15px;
+	cursor: pointer;
+	color: black;
+	border: none;
+	text-decoration-line: underline;
+}
+
+.earthIMG{
+	width: 70px;
+}
+
+figcaption{
+	display: none;
+}
+
+#signin_form small{
+	font-size: 12px;
+}
+
+.error_message{
+	font-size: 13px;
+	color: rgb(179, 0, 0);
+}
+
+.signin_error_message{
+	color: rgb(179, 0, 0);
+	font-size: 13px;
+	display: none;
+}
+
+
+@media only screen and (min-width: 550px) {
+	#signin_form label{
+		font-size: 20px;
+	}
+
+	#signin_form input[type="submit"]{
+		font-size: 18px
+	}
+
+	#login_content h1{
+		margin-top: 30px;
+	}
+
+	.login_error_message, .signin_error_message{
+		font-size: 14px;
+	}
+
+}
+
+/**********************************************************
+					TABLET SETTINGS
+**********************************************************/
+@media only screen and (min-width: 760px) {
+	
+	#login_content{
+		width: 90%;
+	}
+
+	#login_content h1{
+		font-size: 33px;
+	}
+
+	#login_content h2{
+		font-size: 23px;
+		margin: 30px auto 17px;
+	}
+
+	#desc_content{
+		float: left;
+		width: 50%;
+	}
+
+	#login_form, #signin_form{
+		float: left;
+		width: 50%;
+		margin: 35px auto 30px;
+	}
+
+	#signin_form{
+		margin-bottom: 0px;
+	}
+
+	#signin_form label{
+		font-size: 20px;
+	}
+
+	#signin_form input{
+		margin-bottom: 14px;
+		height: 25px;
+	}
+
+	#login_content p{
+		display: initial;
+		font-size: 20px;
+	}
+
+	#login_form label{
+		font-size: 25px;
+ 	}
+
+ 	#login_form input[type="submit"]{
+		width: 34%;
+		font-size: 22px;
+	}
+
+ 	.signin_button{
+		font-size: 18px;
+		margin: 10px auto 0px;
+	}
+
+	.signin_button button, .login_button button{
+		font-size: 17px;
+	}
+
+	.earthIMG{
+		width: 90px;
+	}
+
+	figcaption{
+		display: block;
+		font-size: 21px;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	
+	#login_form{
+		margin: 50px auto 20px;
+	}
+
+	#login_form{
+		margin: 30px auto 30px;
+	}
+
+	#signin_form{
+		margin-top: 20px;
+	}
+
+	.login_button{
+		font-size: 17px;
+	}
+
+	#signin_form input[type="submit"]{
+		font-size: 18px
+	}
+}
+
+/**************************************************************
+					DESKTOP SETTINGS
+***************************************************************/
+@media only screen and (min-width: 1100px) {
+
+	#desc_content{
+		margin: 8px auto 20px ;
+	}
+
+	#login_content h1{
+		font-size: 36px;
+	}
+
+	#login_content h2{
+		font-size: 26px;
+		margin: 30px auto 22px;
+	}
+
+	.earthIMG{
+		margin-bottom: 10px;
+	}
+
+	#login_content{
+		width: 70%;
+	}
+
+	#login_form{
+		margin: 50px auto 20px;
+	}
+
+	figcaption{
+		font-size: 24px;
+	}
+
+	#signin_form{
+		margin-top: 25px;
+	}
+
+	#signin_form input{
+		height: 27px;
+	}
+}
+
+@media only screen and (min-width: 1400px) {
+
+	#login_content{
+		width: 60%;
+	}
+
+	#login_form{
+		margin-top: 53px;
+	}
+
+	#login_form input[type="submit"]{
+		width: 30%;
+		font-size: 22px;
+	}
+
+}

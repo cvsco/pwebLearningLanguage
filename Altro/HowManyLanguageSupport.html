@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		//for Google Chrome
+		const voiceschanged = () => {
+ 		console.log(`Voices #: ${speechSynthesis.getVoices().length}`)
+  		speechSynthesis.getVoices().forEach(voice => {
+    		console.log(voice.name, voice.lang)
+  		})
+		}
+		speechSynthesis.onvoiceschanged = voiceschanged
+
+		//for Firefox
+		console.log(`Voices #: ${speechSynthesis.getVoices().length}`)
+
+		speechSynthesis.getVoices().forEach(voice => {
+  			console.log(voice.name, voice.lang)
+		})
+	</script>
+	<title>Test</title>
+</head>
+<body>
+
+</body>
+</html>

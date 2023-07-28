@@ -1,0 +1,499 @@
+body{
+	margin: 0;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	background-color: #2d545e;
+	box-shadow: inset 2px 2px 20px 10px #12343b;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+#head{
+	padding: 50px;
+	padding-top: 30px;
+  	text-align: center;
+  	color: white;
+}
+
+h1{
+	margin: 0;
+	font-size: 30px;
+}
+
+h2{
+	font-size: 20px;
+
+	text-align: center;
+}
+
+#head p{
+	font-size: 15px;
+}
+
+a{
+	text-decoration: none;
+	font-size: 15px;
+	color: white;
+}
+
+#add h2{
+	padding-top: 20px;
+}
+
+#add{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	background-color: rgb(225, 179, 130);
+	box-shadow: 2px 2px 20px #12343b;
+	width: 100%;
+}
+
+label{
+	display: inline-block;
+	font-size: 13px;
+	padding: 5px 12px 0px 12px;
+	width: 100%;
+}
+
+#addOptions input, textarea, select{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	border-radius: 10px;
+	border: 1px solid #8c8c8c;
+	box-shadow: 2px 2px 3px rgb(140, 140, 140, 0.5);
+	font-size: 12px;
+	outline: none;
+	resize: none;
+}
+
+select{
+	width: 100%;
+}
+
+textarea{
+	width: 100%;
+	height: 7em;
+}
+
+#caption{
+	font-size: 12px;
+	margin: 0;
+	width: 80%;
+}
+
+.subButton{
+	text-align: center;
+}
+
+#submitAdd, #submitChange{
+	width: 70%;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	background-color: #4CAF50;
+	box-shadow: 0 5px #006622;
+	color: white;
+	font-weight: bold;
+	padding: 5px 0px;
+	border: none;
+	border-radius: 8px;
+	outline: none;
+	cursor: pointer;
+}
+
+#submitAdd:active, #submitChange:active{
+	box-shadow: 0 1px #006622;
+	background-color: #3e8e41;
+	transform: translateY(4px);
+}
+
+.col-25{
+	width: 72%;
+	margin: auto;
+}
+
+.col-75{
+	width: 68%;
+	margin: auto;
+}
+
+
+.row:after{
+	content: "";
+	display: table;
+	clear:both;
+}
+
+#change{
+	margin-top: 30px;
+}
+
+#change label{
+	color:white;
+}
+
+#change textarea, #change select{
+	box-shadow: 2px 2px 3px #12343b
+}
+
+#change h2{
+	text-align: center;
+	color: white;
+}
+
+#sidenav{
+	position: fixed;
+	top: 70px;
+	z-index: 1; 
+}
+
+#sidenav a{
+	width: 100px;
+	position: absolute;
+	left: -100px;
+	transition: 0.3s;
+	padding: 15px;
+	padding-right: 100px;
+	font-size: 20px;
+	border-radius: 0 5px 5px 0;
+	font-size: 15px;
+	text-decoration: none;
+}
+
+#sidenav a:hover {
+  left: 0;
+}
+
+#sidenav a:hover{
+	visibility: initial;
+}
+
+#addSidenav{
+	top: 20px;
+	background-color: #ff3300;
+}
+
+#changeSidenav{
+	top: 80px;
+	background-color: #33ccff;
+}
+
+#exit{
+	top: 140px;
+	background-color: #2eb82e;
+}
+
+#message{
+	display: none;
+	opacity: 0;
+	width: 75%;
+	height: 90px;
+	position: fixed;
+	left: 50%;
+	transform: translate(-50%, -45%);
+	margin: auto;
+	z-index: 2;
+	text-align: center;
+	border-radius: 15px;
+	box-shadow: 2px 2px 10px 3px rgb(26, 26, 26, 0.5);
+}
+
+#textMessage{
+	margin-top: 5px;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.wrong{
+	background-color: #ff6666;
+	color: #b32400;
+}
+
+.right{
+	background-color: rgb(102, 204, 0);
+	color: #008000;
+}
+
+#messageImg{
+	background-size: cover;
+	width: 36px;
+	height: 36px;
+	margin: 5px auto 0;
+}
+
+.wrongImg{
+	background-image: url('./../img/wrong.png');
+}
+
+.rightImg{
+	background-image: url('./../img/correct.png');
+}
+
+#questionList{
+	padding:0;
+}
+
+.questionElem{
+	border-radius: 10px;
+	background-color: rgb(225, 179, 130);
+	margin: auto;
+	margin-bottom: 20px;
+	width: 60%;
+	list-style-type: none;
+}
+
+.questionElem label{
+	padding: 0px 10px 5px;
+	width: 100%;
+}
+
+.submitUpdate{
+	background-color: #e60000;
+	color: white;
+	width: 35%;
+	border: none;
+	border-radius: 10px;
+	padding: 5px;
+	margin-bottom: 5px;
+	font-weight: bold;
+	box-shadow: 0 3px #b30000;
+	outline: none;
+	cursor: pointer;
+}
+
+.submitUpdate:active{
+	box-shadow: 0 1px #006622;
+	background-color: #cc0000;
+	transform: translateY(3px);
+}
+
+/*********************************************************
+					OTHER SETTINGS
+**********************************************************/
+@media screen and (min-width: 400px){
+	#head p{
+		font-size: 18px;
+	}
+
+	h1{
+		font-size: 32px;
+	}
+
+	h2{
+		font-size: 23px;
+	}
+
+	a{
+		font-size: 18px;
+	}
+
+	label{
+		font-size: 17px;
+		padding: 10px 12px 0px 12px;
+	}
+
+	textarea, select{
+		font-size: 14px;
+	}
+
+	#submitAdd, #submitChange{
+		font-size: 17px
+	}
+
+	#formChange{
+		width: 73%;
+		margin: auto;
+	}
+
+	#message{
+		width: 65%;
+	}
+
+	.questionElem{
+		float: left;
+		width: 40%;
+		margin: 15px 19px;
+	}
+
+	.questionElem label, .questionElem select, .questionElem textarea{
+		font-size: 13px;
+	}
+}
+
+
+@media screen and (min-width: 600px) {
+
+	#head p{
+		font-size: 22px;
+	}
+
+	h1{
+		font-size: 36px;
+	}
+
+	h2{
+		font-size: 27px;
+	}
+
+	a{
+		font-size: 22px;
+	}
+
+	#formAdd, #formChange{
+		width: 60%;
+		margin: auto;
+	}
+
+	label{
+		font-size: 20px;
+		padding: 10px 12px 0px 12px;
+	}
+
+	.col-25{
+		float:left;
+		width: 45%;
+	}
+
+	.col-75{
+		float: left;
+		width: 55%;
+	}
+
+	#submitAdd{
+		width: 30%;
+		font-size: 18px;
+		margin-top: 20px;
+		padding: 8px;
+	}
+
+	#submitChange{
+		width: 30%;
+		font-size: 18px;
+		margin-top: 20px;
+		padding: 8px;
+	}
+
+	textarea, select{
+		font-size: 15px;
+		margin-bottom: 10px;
+	}
+
+	select{
+		width:100%;
+		padding: 13px;
+	}
+
+	textarea{
+		width: 98%;	
+	}
+
+	hr{
+		width:80%
+	}
+
+	#sidenav{
+		top: 90px;
+	}
+
+	#sidenav a{
+		left: -80px;
+	}
+
+	#message{
+		width: 35%;
+		left: 82%;
+	}
+
+	#questionList{
+		margin-left: 30px;
+	}
+
+	.questionElem{
+		width: 40%;
+	}
+
+	.questionElem label{
+		font-size: 14px;
+	}
+
+	#submitUpdate{
+		font-size: 14px;
+	}
+}
+
+@media screen and (min-width: 800px){
+	#message{
+		width: 30%;
+		left: 84%;
+	}
+
+	#textMessage{
+		font-size: 15px;
+	}
+
+	.questionElem{
+		width: 30%;
+		margin: 15px 12px;
+	}
+}
+
+@media screen and (min-width: 1000px){
+	#head p{
+		font-size: 26px;
+	}
+
+	h1{
+		font-size: 40px;
+	}
+
+	h2{
+		font-size: 30px;
+	}
+	
+	a{
+		font-size: 26px;
+	}
+
+	#formAdd, #formChange{
+		width: 55%;
+	}
+
+	hr{
+		width:	65%
+	}
+
+	#message{
+		width: 27%;
+		left: 86%;
+	}
+
+	.questionElem label{
+		font-size: 15px;
+	}
+
+	.questionElem textarea, .questionElem select{
+		font-size: 14px;
+	}
+}
+
+@media screen and (min-width: 1300px){
+	#formAdd, #formChange{
+		width: 40%;
+	}
+
+	hr{
+		width:	55%
+	}
+
+	#message{
+		width: 23%;
+		left: 88%;
+	}
+
+	#questionList{
+		margin-left: 35px;
+	}
+
+	.questionElem{
+		width: 21%;
+		margin: 15px 20px;
+	}
+}

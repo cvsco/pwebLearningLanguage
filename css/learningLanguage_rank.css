@@ -1,0 +1,96 @@
+#rank{
+	border-radius: 10px;
+	border: 2px solid #dadada;
+	margin: auto;
+	width: 35%;
+	height: 50%;
+	margin-top: 20px;
+	position: fixed;
+	right: 5%;
+	overflow: scroll;
+	padding: 10px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+#rank_header{
+	border-bottom: 2px solid #dadada;
+	padding: 0 17px 12px;
+	margin-bottom: 0;
+	font-size: 20px;
+}
+
+#rank_header span{
+	display: inline-block;
+	color: #808080;
+	width: 66%;
+	text-align: right;
+	position: relative;
+	right: -8%;
+}
+
+#rank_content{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.row{
+	border-bottom: 2px solid #e5e5e5;
+	padding: 12px 12px;
+}
+
+.name, .score{
+	display: inline-block;
+	text-align: center;
+}
+
+.name{
+	width: 60%;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+}
+
+.score{
+	color: #808080;
+	text-align: right;
+	width: 30%;
+}
+
+@media only screen and (min-width: 900px){
+	#rank{
+		width: 32%;
+		max-width: 32%;
+	}
+
+	#rank_header{
+ 		padding: 0 20px 12px;
+	}
+
+	.name{
+		font-size: 15px;
+	}
+
+	.row{
+		padding: 12px 15px;
+	}
+}
+
+@media only screen and (min-width: 1100px){
+	#rank{
+		width: 30%;
+		right: 10%;
+	}
+
+	.name{
+		font-size: 16px;
+	}
+}
+
+@media only screen and (min-width: 1300px){
+	#rank{
+		width: 27%;
+		max-width: 25%;
+		right: 12%;
+	}
+}

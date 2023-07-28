@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="./TestAdmin.css">
+	<title>TestAdmin</title>
+</head>
+<body>
+		<header id="head">
+			<h1>Sezione amministratore</h1>
+			<hr>
+			<p>Gestione delle domande</p>
+		</header>
+
+		<nav id="sidenav" class="sidenav">
+  			<a href="#add" id="addSidenav">Aggiungi</a>
+		  	<a href="#change" id="changeSidenav">Modifica</a>
+		</nav>
+
+		
+		<article id="add">
+			<h2>Aggiungi una nuova domanda</h2>
+			<form id="formAdd" action="">
+				<div class="row">
+					<div class="col-25">
+						<label for="types">Tipo:</label>
+					</div>
+					<div class="col-75">
+						<select id="types" name="types" class="select_type" required>
+							<option value="0" selected disabled hidden>Select type:</option>
+							<option value="1">Audio</option>
+							<option value="2">Multiple</option>
+							<option value="3">Reverso</option>
+							<option value="4">Translate</option>
+						</select>
+					</div>
+				</div>
+	
+				<div class="row">
+					<div class="col-25">
+						<label for="topics">Argomento:</label>
+					</div>
+					<div class="col-75">
+						<select id="topics" name ="topics" class="select_topic" required>
+							<option value="0" selected disabled hidden>Select arg:</option>
+							<optgroup label="Sezione-1">
+								<option value="1_Basi">Basi</option>
+								<option value="2_Cibo">Cibo</option>
+								<option value="3_Animali">Animali</option>
+								<option value="4_Possessivi">Possessivi</option>
+								<option value="5_Pronomi_oggetto">Pronomi oggetto</option>
+								<option value="6_Colori">Colori</option>
+							</optgroup>
+							<optgroup label="Sezione-2">
+								 <option value="7_Presente">Presente</option>
+								 <option value="8_Aggettivi">Aggettivi</option>
+							</optgroup>
+						</select>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-25">
+						<label for="language">Lingua:</label>
+					</div>
+					<div class="col-75">
+						<select required>
+							<option value="0" selected disabled hidden>Select lang:</option>
+							<option value="eng">English</option>
+						</select>
+					</div>
+				</div>
+	
+				<div class="row">
+					<div class="col-25">
+						<label for="textQuestion">Testo dell'eserizio:</label>
+					</div>
+					<div class="col-75">
+						<textarea id="textQuestion" name="textQuestion" placeholder="Inserire testo dell'esercizio..." required></textarea>
+					</div>
+				</div>
+	
+				<div class="row">
+					<div class="col-25">
+						<label for="textAnswer">Risposta:</label>
+					</div>
+					<div class="col-75">
+						<textarea id="textAnswer" name="textAnswer" placeholder="Inserire 	la miglior risposta possibile..."></textarea>
+					</div>
+				</div>
+	
+				<div class="row">
+					<div class="col-25">
+						<label for="textOptions">Altre risposte :</label>
+					</div>
+					<div class="col-75">
+						<textarea id="textOptions" name="textQuestion" placeholder="Inserire altre possibili risposte..."></textarea>
+					</div>
+				</div>
+	
+				<div class="row">
+					<input type="submit" value="Aggiungi" id="submitAdd">
+				</div>
+			</form>
+		</article>
+
+		<article id="change">
+			<h2>Cerca e modifica una domanda</h2>
+			<div>
+				<form id="formChange" action="">
+					<label>Tipo: <br> 
+						<select id="types" name="types">
+							<option value="0" selected disabled hidden>	Select 	type:</option>
+							<option value="1">Audio</option>
+							<option value="2">Multiple</option>
+							<option value="3">Reverso</option>
+							<option value="4">Translate</option>
+						</select>
+					</label>
+
+					<label>Argomento:<br>
+						<select id="topics" name ="topics" class="	select_topic"> 	Argomento:<br>
+							<option value="0" selected disabled hidden>	Select 	arg:</option>
+							<optgroup label="Sezione-1">
+								<option value="1_Basi">Basi</option>
+								<option value="2_Cibo">Cibo</option>
+								<option value="3_Animali">Animali</option>
+								<option value="4_Possessivi">Possessivi</	option>
+								<option value="5_Pronomi_oggetto">Pronomi 	oggetto	</option>
+								<option value="6_Colori">Colori</option>
+							</optgroup>
+							<optgroup label="Sezione-2">
+								 <option value="7_Presente">Presente</option>
+								 <option value="8_Aggettivi">Aggettivi</	option>
+							</optgroup>
+						</select>
+					</label>
+
+					<label>Lingua:<br>
+						<select required>
+							<option value="0" selected disabled hidden>Select lang:</option>
+							<option value="eng">English</option>
+						</select>
+					</label>
+
+					<label>Testo dell'esercizio:<br>
+						<textarea id="textQuestion" name="textQuestion" placeholder="Inserire testo dell'esercizio..." required></textarea>
+					</label>
+					<div>
+						<input type="submit" value="Cerca" id="submitChange">
+					</div>
+				</form>
+			</div>
+		</article>	
+</body>
+</html>

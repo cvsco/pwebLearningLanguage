@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prova</title>
+
+	<style type="text/css">
+
+		#signin_form{
+			display: none;
+			opacity: 0;
+			transform: perspective(100rem) scaleZ(1.4) rotateY(45deg);
+		}
+
+		.signin_button button{
+			background-color: white;
+			cursor: pointer;
+			color: black;
+			border: none;
+			text-decoration-line: underline;
+		}
+
+		/*.div2{
+			transform: perspective(1px) rotateY(0deg) scaleZ(1);
+			transition: transform 0.5s ease;
+		}
+
+		#div1:hover .div2{
+			transform: perspective(100rem) scaleZ(1.4) rotateY(45deg);
+		}*/
+
+	</style>
+
+	
+	<script type="text/javascript">
+		/*function rotate(){
+			var content = document.getElementById('container1');
+			var y = 0;
+			var op = 1;
+			var a=0;
+
+			var rotation = setInterval(function(){
+				if(y==80){
+					clearInterval(rotation);
+					content.style.display = "none";
+					var ap = document.getElementById("side_b");
+					//ap.style.opacity = 0;
+					ap.style.display = "block";
+					var op = 0.1;
+					var apparance = setInterval(function(){
+						if(op>=1){
+							ap.style.opacity = op;
+							clearInterval(apparance);
+						}
+						ap.style.opacity = op;
+						op+=0.1; 
+					}, 100)
+					//z=0;
+					//y=0;
+					//op=1;
+					//a=0;
+				}
+
+				//content.style.transform = "rotate3d(" + x + ','+ y +','+ z+','+a+''+ "deg)";
+				//content.style.transform = "rotateY(" + y + "deg)";
+				content.style.transform = "rotate3d(" +0+ ','+ y+','+0+','+a + "deg)";
+				content.style.transformOrigin = "20% 30%";
+				content.style.opacity = op;
+				y+=10;
+				a+=10;
+				op-=0.10;
+				//z+=10;
+				//x+=10;
+				//a+=10;
+			}, 100);
+		}*/
+
+		function viewSignin(){
+			var lf = document.getElementById("login_form");
+			var op=0.9;
+			
+			var rotation = setInterval(function(){
+				if(op<=0.1){
+					clearInterval(rotation);
+					lf.style.display = "none";
+
+					var sf = document.getElementById("signin_form");
+					sf.style.display = "block";
+					op = 0.1;
+					var apparance = setInterval(function(){
+						if(op>=1){
+							sf.style.opacity = op;
+							clearInterval(apparance);
+						}
+						sf.style.opacity = op;
+						op+=0.1; 
+						sf.style.transition = "transform 0.5s ease";
+						sf.style.transform = "perspective("+0+") "+ "scaleZ("+0.1+") "+ "rotateY("+0+"deg)";
+					}, 45);
+				}
+				
+				lf.style.opacity = op;
+				op-=0.1;
+				lf.style.transition = "transform 0.5s ease";
+				lf.style.transform = "perspective("+100+'rem)'+ "scaleZ("+1.4+") rotateY("+45+"deg)";
+			}, 45);
+		}
+	</script>
+</head>
+<body>
+	<div id="login_form">
+		<form action="" method="post" name="login">
+			<div>
+				<label>Username</label><br>
+				<input type="text" name="username" value="">
+			</div>
+			<div>
+				<label>Password</label>
+				<div>
+				<input type="password" name="password" value=""></div>
+			</div> 
+			<div class="signin_button">
+				Non sei un utente registrato ? <button type="button" onclick='viewSignin()'>Registrati ora</button>
+			</div>
+		</form>
+	</div>
+	<div id="signin_form">
+		<form action="" method="post" name="signin">
+			<div>
+				<label for="email">Email</label><br>
+				<input type="email" name="email" id="email" required>
+			</div>
+			<div>
+				<label for="reg_uesername">Username</label><br>
+				<input type="text" name="username" id="reg_username" required>
+			</div>
+			<div>
+				<label for="reg_passwd">Password</label><br>
+				<input type="password" id="reg_passwd" name="password" pattern=".{8,}" required>
+			</div> 
+			<div>
+				<label for="conf_reg_passwd">Conferma password</label><br>
+				<input type="password" id="conf_reg_passwd" name="conferma_password" pattern=".{8,}" required>
+			</div>
+			<div class="login_button">
+				sei gia iscritto ? <button type="button">LogIn</button>
+			</div>
+		</form>
+	</div>
+
+	<!--<div id="div1" style="width:100px; height:100px; background-color: grey">
+		<div class="div2" style="background-color:blue; width:100px; height:100px; blue">rotateY</div>
+		<!--<img src="./img/speaker.png" style="width:80px; height:80px; /*transform: perspective(500px) scaleZ(2) rotateY(45deg); transform:rotateY(0deg) scaleZ(1.4);*/ ">
+	</div>-->
+</body>
+</html>

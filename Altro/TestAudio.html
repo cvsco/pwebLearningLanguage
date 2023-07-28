@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style type="text/css">
+		#audio_button{
+			width:40px; 
+			height: 40px;
+			padding: 10px 10px;
+			cursor: pointer;
+			//box-shadow: 3px 3px 7px 3px rgb(166, 166, 166, 0.5);
+			//border-radius: 4px 4px;
+			background-image: url('./../img/speaker.png'); 
+			background-color: #ffffff;  
+			background-size: cover; 
+			border-style: none;
+		}
+
+		#audio_button:active{
+			//box-shadow: 1px 1px 5px 3px rgb(140, 140, 140, 0.5);
+  			transform: translateY(2px);
+		}
+
+		#utterace{
+			font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+			font-size: 18px;
+		}
+	</style>
+
+	<script type="text/javascript">
+		/*function audio(){
+			var snd = new Audio("./audio/he studies ten hours a day - scuola.mp3");
+			snd.play();
+		}*/
+	</script>
+	<title>Test audio</title>
+</head>
+<body>
+	<div id="utterace">
+		<input id="audio_button" type="button"  onclick="speak()">
+		<span id="text">Hello world, how are you</span>
+	</div>
+	<div id="textFra">Bonjour le monde comment vas tu</div>
+	<div id="textDeu">Hallo Welt wie geht es dir</div>
+	<div id="textIta">Ciao mondo come stai</div>
+	<script type="text/javascript" src="./TestAudio.js"></script>
+</body>
+</html>
